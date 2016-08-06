@@ -229,19 +229,20 @@ public static StreamDecoder forInputStreamReader(InputStream in, Object lock, St
     throw new UnsupportedEncodingException (csn);
 }```
 `charsetName`参数传进来的就是`null`，所以实际会取`Charset.defaultCharset().name()`。
-查看源码可知，这个默认编码可以通过启动参数修改，默认是`UTF-8`。
+查看源码可知，这个编码默认是`System.getProperty("file.encoding")`，如不支持则会使用`UTF-8`。
 这里我就不再去分析`Charset.newDecoder`的做了什么了，直接拿一段简单的代码执行一下就知道了：
 
 ```java
-Log.debugVals(Charset.defaultCharset().newDecoder().getClass());
-// [00:00:00] [DEBUG]: [class sun.nio.cs.UTF_8$Decoder]
+System.out.println(Charset.defaultCharset().newDecoder().getClass());
+// Windows10x64 中文版 未改动任何参数 默认编码 GBK
+// 输出：class sun.nio.cs.ext.DoubleByte$Decoder
 ```
-OK，现在我们知道了，解码工作实际是由`sun.nio.cs.UTF_8$Decoder`来完成的。
-这个类是个很长的类，里面实现了`UTF-8`的解码，这个就比较复杂了，我就不写了，有兴趣可以自己去瞅瞅：
-[sun.nio.cs.UTF_8$Decoder](http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/sun/nio/cs/UTF_8.java#l81)
+OK，现在我们知道了，解码工作实际是由`sun.nio.cs.ext.DoubleByte$Decoder`来完成的。
+这个类里面实现了对双字节字符的解码，这个我就不写了，有兴趣可以自己去瞅瞅：
+[sun.nio.cs.ext.DoubleByte$Decoder](http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/sun/nio/cs/ext/DoubleByte.java#l111)
 
 ## 结论
-`FileReader`是通过`UTF-8`解码来读取中文的。
+`FileReader`是通过`System.getProperty("file.encoding")`对应的解码器来读取中文的。
 
 ## 链接 & 参考
 * [StreamDecoder.java](http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/sun/nio/cs/StreamDecoder.java)
