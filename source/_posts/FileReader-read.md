@@ -1,7 +1,7 @@
 ---
 title: FileReader 是如何读取中文的？
 date: 2016-8-6 19:57:41
-updated: 2016-8-6 22:21:46
+updated: 2016-8-25 14:03:57
 categories: Java
 tags:
   - Java
@@ -136,9 +136,9 @@ int implRead(char[] cbuf, int off, int end) throws IOException {
     // 是否已经读到结尾的标志位
     boolean eof = false;
     for (;;) {
-        // 对缓冲区中的字符进行解码
+        // 对输入缓冲区中的字符进行解码
         CoderResult cr = decoder.decode(bb, cb, eof);
-        // 如果没有更多的输入要处理
+        // 如果是因为 Underflow 结束的解码
         if (cr.isUnderflow()) {
             // 如果已经读到结尾则跳出循环
             if (eof)
