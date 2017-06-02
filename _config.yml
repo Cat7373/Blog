@@ -69,8 +69,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/Cat7373/Blog.git
+  repo: https://github.com/lg-Cat73/Blog.git
   branch: gh-pages
 
-# =============== 其他配置 ===============
-duoshuo_shortname: Cat73_Blog
