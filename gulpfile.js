@@ -3,22 +3,30 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var htmlclean = require('gulp-htmlclean');
 var htmlmin = require('gulp-htmlmin');
+var babel = require('gulp-babel');
+var pump = require('pump');
 
-// Ñ¹Ëõ public Ä¿Â¼ css
+
+// å‹ç¼© public ç›®å½• css
 gulp.task('minify-css', function() {
-    return gulp.src('./public/**/*.css')
+    return gulp.src(['./public/**/*.css', '!./public/**/*.min.css'])
         .pipe(cleanCSS())
         .pipe(gulp.dest('./public'));
 });
 
-// Ñ¹Ëõ public/js Ä¿Â¼ js
-gulp.task('minify-js', function() {
-    return gulp.src('./public/**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./public'));
+// å‹ç¼© public/js ç›®å½• js
+gulp.task('minify-js', function (cb) {
+    pump([
+        gulp.src(['./public/**/*.js', '!./public/**/*.min.js']),
+        babel({
+            presets: ['es2015']
+        }),
+        uglify(),
+        gulp.dest('./public')
+    ], cb);
 });
 
-// Ñ¹Ëõ public Ä¿Â¼ html
+// å‹ç¼© public ç›®å½• html
 gulp.task('minify-html', function() {
   return gulp.src('./public/**/*.html')
     .pipe(htmlclean())
@@ -31,7 +39,7 @@ gulp.task('minify-html', function() {
     .pipe(gulp.dest('./public'))
 });
 
-// Ö´ĞĞ gulp ÃüÁîÊ±Ö´ĞĞµÄÈÎÎñ
+// æ‰§è¡Œ gulp å‘½ä»¤æ—¶æ‰§è¡Œçš„ä»»åŠ¡
 gulp.task('default', [
     'minify-html','minify-css','minify-js'
 ]);

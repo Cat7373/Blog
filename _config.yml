@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.cat73.org
+url: https://blog.cat73.org
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -69,6 +69,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/lg-Cat73/Blog.git
+  repo: git@github.com:Cat7373/Blog.git
   branch: gh-pages
-
