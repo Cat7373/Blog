@@ -167,7 +167,7 @@ tags:
 1. 通过`crontab`在每月`1`号自动重新签发证书
 2. 执行`crontab -e`,添加下面一行保存即可
    ```
-   0 0 1 * * certbot renew --force-renew --rsa-key-size 4096 && nginx -s reload
+   0 0 1 * * certbot renew --force-renew && nginx -s reload
    ```
 
 ## 参考内容
