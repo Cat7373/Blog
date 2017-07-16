@@ -36,7 +36,7 @@ tags:
 ### 获取证书
 > 我是把几个域名都放到一张证书里的，这样可以支持一些比较旧的，不支持`SNI`的浏览器(虽然我这博客不支持。。)
 
-1. 执行`certbot certonly --rsa-key-size 4096 -d 域名1 -d 域名2...`
+1. 执行`certbot certonly --must-staple --rsa-key-size 4096 -d 域名1 -d 域名2...`
    这步的`-rsa-key-size 4096`是为了`ssllabs`满分，如果你不想弄这个可以不加，能略微提升网站访问速度。
    每个`-d`后面跟一个域名，有多少个域名跟多少个
 2. 运行后它会让你选验证模式，我这里已经开启了`nginx`，因此选`2`，自己设置`webroot`
@@ -169,3 +169,6 @@ tags:
    ```
    0 0 1 * * certbot renew --force-renew --rsa-key-size 4096 && nginx -s reload
    ```
+
+## 参考内容
+[ssllabs评分规则](https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide)
