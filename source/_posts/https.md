@@ -1,7 +1,7 @@
 ---
 title: 用 letsencrypt 免费证书开启 HTTPS 并获得 ssllabs 满分的过程
 date: 2017-07-16 15:43:00
-updated: 2017-07-16 15:53:00
+updated: 2017-07-16 15:58:00
 categories: Https, letsencrypt
 tags:
   - Https
@@ -69,7 +69,7 @@ tags:
      listen 80;
      server_name 域名;
 
-     return 302 https://$host$request_uri;
+     return 301 https://$host$request_uri;
    }
    ```
 2. 配置 https
@@ -160,3 +160,12 @@ tags:
    2. 确保你照做了上面的`4.1.2`
    3. 访问 https://hstspreload.org/，输入你的主域名，提交即可，稍后的提示确认，打勾后再提交即可
    4. 耐心等待审核，一般一个月内可审核完成，审核完成之前请不要修改网站配置。
+
+## 自动重新签发证书
+> `letsencrypt`申请的证书只有`3`个月有效期，每隔`3`个月都手动来重新签发一次得累死。。。
+
+1. 通过`crontab`在每月`1`号自动重新签发证书
+2. 执行`crontab -e`,添加下面一行保存即可
+   ```
+   0 0 1 * * certbot renew --force-renew --rsa-key-size 4096 && nginx -s reload
+   ```
