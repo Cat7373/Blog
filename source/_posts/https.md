@@ -1,7 +1,7 @@
 ---
 title: 用 letsencrypt 免费证书开启 HTTPS 并获得 ssllabs 满分的过程
 date: 2017-07-16 15:43:00
-updated: 2017-07-16 15:58:00
+updated: 2017-07-16 16:43:00
 categories: Https, letsencrypt
 tags:
   - Https
@@ -141,7 +141,7 @@ tags:
 > 如果还没满分，那大概是我这篇文章过时了吧。。。
 
 1. 开启 HPKP
-   > `HPKP`可以检查你的证书是不是制定的证书签发机构签的，如果不是会阻止访问，也可配置出现问题时向制定地址报告等
+   > `HPKP`可以检查你的证书是不是指定的证书签发机构签的，如果不是会阻止访问，也可配置出现问题时向指定地址报告等
    1. 在你的浏览器访问`https://www.ssllabs.com/ssltest/analyze.html?d=你的域名`
    2. 等测试结束后，在页面搜索`Certification Paths`
    3. 点击下面的展开
