@@ -1,7 +1,6 @@
 ---
 title: 本博客的搭建过程
 date: 2016-06-08 07:30:00
-updated: 2016-6-16 16:51:37
 categories: Hexo
 tags:
   - Hexo

@@ -1,7 +1,6 @@
 ---
 title: 用 letsencrypt 免费证书开启 HTTPS 并获得 ssllabs 满分的过程
 date: 2017-07-16 15:43:00
-updated: 2017-07-16 16:43:00
 categories: Https, letsencrypt
 tags:
   - Https
@@ -167,7 +166,7 @@ tags:
 1. 通过`crontab`在每月`1`号自动重新签发证书
 2. 执行`crontab -e`,添加下面一行保存即可
    ```
-   0 0 1 * * certbot renew --force-renew && nginx -s reload
+   0 0 1 * * certbot renew --force-renew && /etc/init.d/nginx reload
    ```
 
 ## 参考内容
