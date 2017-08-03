@@ -12,13 +12,13 @@ tags:
 
 <!-- more -->
 ## 在 nginx 的 location 中配置
-```
-# 只支持 proxy 模式下设置，SameSite 不需要可删除
+```nginx
+# 只支持 proxy 模式下设置，SameSite 不需要可删除，如果想更安全可以把 SameSite 设置为 Strict
 proxy_cookie_path / "/; httponly; secure; SameSite=Lax";
 ```
 
 ## 示例
-```
+```nginx
 server {
     listen 443 ssl http2;
     server_name www.cat73.org;
