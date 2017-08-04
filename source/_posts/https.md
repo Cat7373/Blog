@@ -17,7 +17,7 @@ tags:
 ## 通过`letsencrypt`开启`HTTPS`
 > 开始因为英语不好，明明官网都写得很明白了，然而还是折腾了好久。。。
 > 我是使用的`Ubuntu 17.04`+`Nginx 13`，不同环境操作过程可能不一样，不要直接照着做。。。
-> 先上一个自己域名的满分链接：https://www.ssllabs.com/ssltest/analyze.html?d=cat73.org
+> 先上一个自己域名的满分链接：https://www.ssllabs.com/ssltest/analyze.html?d=blog.cat73.org
 
 ### 准备工作
 1. 确保你要申请证书的域名都解析到了这台服务器上，且能直接通过域名访问。
@@ -108,7 +108,7 @@ tags:
 
    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA';
 
-   ssl_ecdh_curve secp384r1:secp521r1;
+   ssl_ecdh_curve sect571r1:secp521r1:brainpoolP512r1:secp384r1:brainpoolP384r1:sect571k1;
 
    ssl_stapling on;
    ssl_stapling_verify on;
