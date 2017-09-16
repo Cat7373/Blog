@@ -1,7 +1,7 @@
 ---
 title: 用 letsencrypt 免费证书开启 HTTPS 并获得 ssllabs 满分的过程
 date: 2017-07-16 15:43:00
-categories: Https, letsencrypt
+categories: Https
 tags:
   - Https
   - letsencrypt
