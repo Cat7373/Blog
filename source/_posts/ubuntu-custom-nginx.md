@@ -58,7 +58,6 @@ tags:
 apt-get update
 apt-get install software-properties-common
 add-apt-repository ppa:chris-lea/nginx-devel
-apt-get update
 ```
 
 ### 准备`Nginx`编译环境和源代码
@@ -102,8 +101,9 @@ apt-get update
    ```
 2. 安装`Nginx`
    ```shell
-   dpkg -i nginx_1.13.5-1chl1~zesty1_all.deb
+   dpkg -i nginx-light_1.13.5-1chl1~zesty1_amd64.deb
    apt-get install -f
+   apt-mark hold nginx-light
    ```
 
 ## 最后
