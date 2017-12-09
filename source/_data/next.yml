@@ -5,8 +5,10 @@
 # Set default keywords (Use a comma to separate)
 keywords: "Cat73"
 
-# Specify the date when the site was setup
-since: 2016
+footer:
+  # Specify the date when the site was setup.
+  # If not defined, current year will be used.
+  since: 2016
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -20,30 +22,16 @@ seo: true
 index_with_subtitle: true
 
 # ---------------------------------------------------------------
-# Sidebar Settings
+# Menu Settings
 # ---------------------------------------------------------------
 
-# Social Links
-# Key is the link label showing to end users.
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
-social:
-  Github: https://github.com/Cat7373
-
-# Social Links Icons
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an globe mask icon presenting up means that the item has no mapping icon.
-social_icons:
-  enable: true
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-
-# Sidebar Avatar
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: https://avatars1.githubusercontent.com/u/9296576
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
+menu:
+  tags: /tags/ || tags
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -56,11 +44,32 @@ scheme: Pisces
 # Sidebar Settings
 # ---------------------------------------------------------------
 
+# Social Links.
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+social:
+  Github: https://github.com/Cat7373
+
+# Social Links Icons
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
+#   When an globe mask icon presenting up means that the item has no mapping icon.
+social_icons:
+  GitHub: github
+
 # Blog rolls
 links_title: 友情链接
 links_layout: inline
 links:
   Jim's Notes: http://notes.jimliang.com/
+
+# Sidebar Avatar
+# in theme directory(source/images): /images/avatar.gif
+# in site  directory(source/uploads): /uploads/avatar.gif
+avatar: https://avatars1.githubusercontent.com/u/9296576
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -72,22 +81,10 @@ links:
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night eighties
 
-# ---------------------------------------------------------------
-# Font Settings
-# - Find fonts on Google Fonts (https://www.google.com/fonts)
-# - All fonts set here will have the following styles:
-#     light, light italic, normal, normal italic, bold, bold italic
-# - Be aware that setting too much fonts will cause site running slowly
-# - Introduce in 5.0.1
-# ---------------------------------------------------------------
-font:
-  enable: false
-
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
 
 # Theme version
-version: 5.1.1
-
+version: 5.1.3
