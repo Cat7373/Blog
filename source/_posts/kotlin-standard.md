@@ -82,13 +82,16 @@ fun <T> T.takeIf(predicate: (T) -> Boolean): T?
 fun <T> T.takeUnless(predicate: (T) -> Boolean): T?
 ```
 这两个方法可以执行一段代码，这段代码可以返回一个布尔值来控制之后的流程  
-如果返回`true`，则这个函数会返回`this`，否则会返回`null`
+对于`takeIf`：如果返回`true`，则这个函数会返回`this`，否则会返回`null`
+而对于`takeUnless`则刚好与`takeIf`的行为相反
 使用示例：
 ```kotlin
 "Hello"
     .takeIf { it.length == 5 } // 判断字符串的长度等于 5，返回 true，因此 takeIf 函数会返回 this
     ?.run { this + " World!" } // 拼接字符串，因为上一句没返回 null，所以可以正常执行
     ?.apply(::println) // 打印刚刚拼好的字符串
-    ?.takeIf { it.length == 10 } // 判断字符串的长度等于 5，返回 false，因此 takeIf 函数会返回 null
+    ?.takeUnless { it.length == 5 } // 判断字符串的长度等于 5，返回 false，因此 takeUnless 函数会返回 this
+    ?.apply(::println) // 打印刚刚拼好的字符串
+    ?.takeIf { it.length == 5 } // 判断字符串的长度等于 5，返回 false，因此 takeIf 函数会返回 null
     ?.apply(::println) // 这句不会执行！因为上一句返回了 null
 ```
