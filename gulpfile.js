@@ -3,7 +3,6 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var htmlclean = require('gulp-htmlclean');
 var htmlmin = require('gulp-htmlmin');
-var babel = require('gulp-babel');
 var pump = require('pump');
 
 
@@ -18,9 +17,6 @@ gulp.task('minify-css', function() {
 gulp.task('minify-js', function (cb) {
     pump([
         gulp.src(['./public/**/*.js', '!./public/**/*.min.js']),
-        babel({
-            presets: ['es2015']
-        }),
         uglify(),
         gulp.dest('./public')
     ], cb);
