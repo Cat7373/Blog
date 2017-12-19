@@ -4,8 +4,6 @@ date: 2017-12-19 16:12:00
 categories: Navicat
 tags:
   - Navicat
-  - Mac
-  - Linux
 ---
 ## 前言
 > 以前自己玩的时候一直用`Navicat`操作数据库，感觉手感不错
@@ -57,3 +55,11 @@ with open(regfile, 'r+') as f:
 # m h dom mon dow command
 0 10 * * * rm ~/Library/Application\ Support/PremiumSoft\ CyberTech/Navicat*/Navicat*/.tc*
 ```
+
+## Windows
+由于`Windows`用的注册表，所以感觉略麻烦，加上我自己不用`Windows`，所以就简单来了
+
+1. `Win + R`，输入`regedit`回车
+2. 删除`HKEY_CURRENT_USER\Software\PremiumSoft\Data`
+3. 展开`HKEY_CURRENT_USER\Software\Classes\CLSID`
+4. 展开每一个子文件夹，如果里面只包含一个名为`Info`的文件夹，就删掉它
