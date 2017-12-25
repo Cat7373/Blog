@@ -17,6 +17,7 @@ tags:
 ## Linux
 `Linux`下`Navicat`是通过脚本启动的，因此很容易在运行之前插一个脚本，由这个脚本来重置试用期
 注意脚本是`Python3`的，每次运行均会重置试用期到`14`天，要求`64`位版`Navicat`
+插在`Navicat`启动脚本之前即可
 
 ```python
 #!/usr/bin/env python3
@@ -47,11 +48,14 @@ with open(regfile, 'r+') as f:
 ```
 
 ## Mac
-`Mac`下破解很简单，只要删除一个文件即可(不会丢失任何配置)，因此我给丢了个`cron`定时任务
-运行`crontab -e`，然后粘贴下面的内容即可(注意要在自己的用户上运行，不要到跳到`root`)
-如果哪天发现破解没生效提示已过期，就关掉之后手动执行一下重置命令即可
+> 很抱歉下面的方法是无效的，我想的太简单了，等我多试几天有个确定可用的方法再更新吧。。
+
+~~`Mac`下破解很简单，只要删除一个文件即可(不会丢失任何配置)，因此我给丢了个`cron`定时任务~~
+~~运行`crontab -e`，然后粘贴下面的内容即可(注意要在自己的用户上运行，不要到跳到`root`)~~
+~~如果哪天发现破解没生效提示已过期，就关掉之后手动执行一下重置命令即可~~
 
 ```cron
+# ### 无效 ###
 # m h dom mon dow command
 0 10 * * * rm ~/Library/Application\ Support/PremiumSoft\ CyberTech/Navicat*/Navicat*/.tc*
 ```
@@ -59,7 +63,8 @@ with open(regfile, 'r+') as f:
 ## Windows
 由于`Windows`用的注册表，所以感觉略麻烦，加上我自己不用`Windows`，所以就简单来了
 
-1. `Win + R`，输入`regedit`回车
-2. 删除`HKEY_CURRENT_USER\Software\PremiumSoft\Data`
-3. 展开`HKEY_CURRENT_USER\Software\Classes\CLSID`
-4. 展开每一个子文件夹，如果里面只包含一个名为`Info`的文件夹，就删掉它
+1. 关闭`Navicat`
+2. `Win + R`，输入`regedit`回车
+3. 删除`HKEY_CURRENT_USER\Software\PremiumSoft\Data`
+4. 展开`HKEY_CURRENT_USER\Software\Classes\CLSID`
+5. 展开每一个子文件夹，如果里面只包含一个名为`Info`的文件夹，就删掉它
