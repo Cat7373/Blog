@@ -71,7 +71,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: https://avatars1.githubusercontent.com/u/9296576
+avatar: upload/headimg.jpg
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
