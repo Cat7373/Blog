@@ -1,9 +1,10 @@
-var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var htmlclean = require('gulp-htmlclean');
-var htmlmin = require('gulp-htmlmin');
-var pump = require('pump');
+let gulp = require('gulp');
+let cleanCSS = require('gulp-clean-css');
+let uglify = require('gulp-uglify');
+let htmlclean = require('gulp-htmlclean');
+let htmlmin = require('gulp-htmlmin');
+let sriHash = require('gulp-sri-hash');
+let pump = require('pump');
 
 
 // 压缩 public 目录 css
@@ -35,7 +36,12 @@ gulp.task('minify-html', function() {
     .pipe(gulp.dest('./public'))
 });
 
+// SRI
+gulp.task('sri', ['minify-html', 'minify-css', 'minify-js'], function() {
+  return gulp.src('./public/**/*.html')
+    .pipe(sriHash({algo: 'sha512'}))
+    .pipe(gulp.dest('./public'))
+});
+
 // 执行 gulp 命令时执行的任务
-gulp.task('default', [
-    'minify-html','minify-css','minify-js'
-]);
+gulp.task('default', ['minify-html', 'minify-css', 'minify-js', 'sri']);
