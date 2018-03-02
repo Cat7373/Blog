@@ -12,7 +12,7 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-sri-hash": "^1.5.0",
     "gulp-uglify": "^3.0.0",
-    "hexo": "^3.5.0",
+    "hexo": "^3.6.0",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.3",
