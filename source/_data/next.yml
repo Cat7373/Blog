@@ -70,6 +70,18 @@ links:
 # in site  directory(source/uploads): /uploads/avatar.gif
 avatar: upload/headimg.jpg
 
+
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+
+# Post edit
+# Dependencies: https://github.com/hexojs/hexo-deployer-git
+post_edit:
+  enable: true
+  url: https://github.com/Cat7373/Blog/tree/src/source/_posts/ # Link for view source.
+
+
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
