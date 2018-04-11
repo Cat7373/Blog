@@ -2,9 +2,6 @@
 # # Site Information Settings
 # # ---------------------------------------------------------------
 
-# Set default keywords (Use a comma to separate)
-keywords: "Cat73"
-
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
@@ -79,8 +76,17 @@ avatar: upload/headimg.jpg
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: blog-lr15qcwjm3
+
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+gitment:
+  enable: true
+  github_user: Cat7373
+  github_repo: Blog
+  client_id: 7e893f940e4723d2af60
+  client_secret: b5336eb0b13e2b09d26bc6f7fc84752c7c104db3
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -98,4 +104,4 @@ highlight_theme: night eighties
 #! ---------------------------------------------------------------
 
 # Theme version
-version: 6.0.4
+version: 6.1.0
