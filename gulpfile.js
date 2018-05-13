@@ -5,6 +5,7 @@ let htmlclean = require('gulp-htmlclean');
 let htmlmin = require('gulp-htmlmin');
 let sriHash = require('gulp-sri-hash');
 let pump = require('pump');
+let dom = require('gulp-dom')
 
 
 // 压缩 public 目录 css
@@ -26,6 +27,12 @@ gulp.task('minify-js', function (cb) {
 // 压缩 public 目录 html
 gulp.task('minify-html', function() {
   return gulp.src('./public/**/*.html')
+    .pipe(dom(function () {
+      Array.from(this.querySelectorAll('a'))
+        .filter(link => link.target === '_blank')
+        .forEach(link => link.rel = 'noopener noreferrer')
+      return this
+    }))
     .pipe(htmlclean())
     .pipe(htmlmin({
          removeComments: true,

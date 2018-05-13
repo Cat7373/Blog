@@ -109,11 +109,3 @@ gitment:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night eighties
-
-#! ---------------------------------------------------------------
-#! DO NOT EDIT THE FOLLOWING SETTINGS
-#! UNLESS YOU KNOW WHAT YOU ARE DOING
-#! ---------------------------------------------------------------
-
-# Theme version
-version: 6.1.0
