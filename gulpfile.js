@@ -44,11 +44,11 @@ gulp.task('minify-html', function() {
 });
 
 // SRI
-gulp.task('sri', ['minify-html', 'minify-css', 'minify-js'], function() {
+gulp.task('sri', function() {
   return gulp.src('./public/**/*.html')
     .pipe(sriHash({algo: 'sha512'}))
     .pipe(gulp.dest('./public'))
 });
 
 // 执行 gulp 命令时执行的任务
-gulp.task('default', ['minify-html', 'minify-css', 'minify-js', 'sri']);
+gulp.task('default', gulp.series(gulp.parallel('minify-html', 'minify-css', 'minify-js'), 'sri'));
