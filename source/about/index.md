@@ -12,3 +12,6 @@ type: "about"
 
 ## 源码
 本博客的源码：[https://github.com/Cat7373/Blog](https://github.com/Cat7373/Blog)
+
+## GPG Key
+如果你需要我的`GPG`公钥，你可以从[这里](gpg.html)获得它
