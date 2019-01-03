@@ -64,6 +64,8 @@ links_title: 友情链接
 links_layout: inline
 links:
   Jim's Notes: http://notes.jimliang.com/
+  Locsian's Blog: https://www.locsian.com
+  Zombie0's Blog: http://crazymin.co
 
 # Sidebar Avatar
 avatar:
@@ -110,6 +112,9 @@ gitment:
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
+
+# Disable Baidu tranformation on mobile devices.
+disable_baidu_tranformation: true
 
 # Code Highlight theme
 # Available value:
