@@ -1,17 +1,26 @@
 # ---------------------------------------------------------------
-# # Site Information Settings
-# # ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
 
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
   since: 2016
 
+# Follow me on GitHub banner in right-top corner.
+github_banner:
+  enable: true
+  permalink: https://github.com/Cat7373
+  title: Follow me on GitHub
+
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
 
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: true
+
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
 seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
@@ -24,9 +33,10 @@ index_with_subtitle: true
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
 # Usage: `Key: /link/ || icon`
-# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
+# External url should start with http:// or https://
 menu:
   categories: /categories/ || th
   tags: /tags/ || tags
@@ -41,47 +51,40 @@ scheme: Gemini
 
 # ---------------------------------------------------------------
 # Sidebar Settings
+# See: https://theme-next.org/docs/theme-settings/sidebar/
 # ---------------------------------------------------------------
 
-# Social Links.
+# Posts / Categories / Tags in sidebar.
+site_state: true
+
+# Social Links
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  Github: https://github.com/Cat7373
-
-# Social Links Icons
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an globe mask icon presenting up means that the item has no mapping icon.
-social_icons:
-  GitHub: github
+  Github: https://github.com/Cat7373 || github
 
 # Blog rolls
-links_title: 友情链接
 links_layout: inline
 links:
   Jim's Notes: http://notes.jimliang.com/
   Locsian's Blog: https://www.locsian.com
-  Zombie0's Blog: http://crazymin.co
 
 # Sidebar Avatar
 avatar:
-  # in theme directory(source/images): /images/avatar.gif
-  # in site  directory(source/uploads): /uploads/avatar.gif
+  # In theme directory (source/images): /images/avatar.gif
+  # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
   url: upload/headimg.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: true
-  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
-  opacity: 0.9
   # If true, the avatar would be rotated with the cursor.
   rotated: true
 
 # ---------------------------------------------------------------
 # Post Settings
+# See: https://theme-next.org/docs/theme-settings/posts/
 # ---------------------------------------------------------------
 
 # Post edit
@@ -90,34 +93,28 @@ post_edit:
   enable: true
   url: https://github.com/Cat7373/Blog/tree/src/source/_posts/ # Link for view source.
 
-
-# ---------------------------------------------------------------
-# Third Party Services Settings
-# ---------------------------------------------------------------
-
-# Disqus
-disqus:
-  enable: false
-  shortname: blog-lr15qcwjm3
-
-# Gitment
-# Introduction: https://imsun.net/posts/gitment-introduction/
-gitment:
-  enable: true
-  github_user: Cat7373
-  github_repo: Blog
-  client_id: 7e893f940e4723d2af60
-  client_secret: b5336eb0b13e2b09d26bc6f7fc84752c7c104db3
-
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
-
-# Disable Baidu tranformation on mobile devices.
-disable_baidu_tranformation: true
-
 # Code Highlight theme
-# Available value:
-#    normal | night | night eighties | night blue | night bright
+# Available values: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night eighties
+
+# ---------------------------------------------------------------
+# Third Party Services Settings
+# See: https://theme-next.org/docs/third-party-services/
+# You may need to install dependencies or set CDN URLs in `vendors`
+# There are two different CDN providers by default:
+#   - jsDelivr (cdn.jsdelivr.net), works everywhere even in China
+#   - CDNJS (cdnjs.cloudflare.com), provided by cloudflare
+# ---------------------------------------------------------------
+
+# Gitment
+# Introduction: https://github.com/imsun/gitment
+gitment:
+  enable: true
+  github_user: Cat7373 # MUST HAVE, Your Github Username
+  github_repo: Blog # MUST HAVE, The name of the repo you use to store Gitment comments
+  client_id: 7e893f940e4723d2af60 # MUST HAVE, Github client id for the Gitment
+  client_secret: b5336eb0b13e2b09d26bc6f7fc84752c7c104db3 # EITHER this or proxy_gateway, Github access secret token for the Gitment
