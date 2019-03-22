@@ -110,11 +110,12 @@ highlight_theme: night eighties
 #   - CDNJS (cdnjs.cloudflare.com), provided by cloudflare
 # ---------------------------------------------------------------
 
-# Gitment
-# Introduction: https://github.com/imsun/gitment
-gitment:
+# Gitalk
+# Demo: https://gitalk.github.io
+gitalk:
   enable: true
-  github_user: Cat7373 # MUST HAVE, Your Github Username
-  github_repo: Blog # MUST HAVE, The name of the repo you use to store Gitment comments
-  client_id: 7e893f940e4723d2af60 # MUST HAVE, Github client id for the Gitment
-  client_secret: b5336eb0b13e2b09d26bc6f7fc84752c7c104db3 # EITHER this or proxy_gateway, Github access secret token for the Gitment
+  github_id: Cat7373 # Github repo owner
+  repo: Blog # Repository name to store issues
+  client_id: 7e893f940e4723d2af60 # Github Application Client ID
+  client_secret: b5336eb0b13e2b09d26bc6f7fc84752c7c104db3 # Github Application Client Secret
+  admin_user: Cat7373 # GitHub repo owner and collaborators, only these guys can initialize github issues
