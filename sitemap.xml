@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.cat73.org/20170716/2017071601.https/</loc>
+    
+    <lastmod>2019-06-02T00:31:38.377Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.cat73.org/20190601/2019060101.ipv6-bypass-firewall/</loc>
     
     <lastmod>2019-06-01T05:32:29.949Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>https://blog.cat73.org/20160805/2016080501.next-highlight-langs/</loc>
     
     <lastmod>2018-03-15T05:15:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.cat73.org/20170716/2017071601.https/</loc>
-    
-    <lastmod>2018-03-15T05:15:13.000Z</lastmod>
     
   </url>
   
