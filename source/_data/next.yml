@@ -3,8 +3,7 @@
 # ---------------------------------------------------------------
 
 footer:
-  # Specify the date when the site was setup.
-  # If not defined, current year will be used.
+  # Specify the date when the site was setup. If not defined, current year will be used.
   since: 2016
 
 # Follow me on GitHub banner in right-top corner.
@@ -66,7 +65,6 @@ social:
   Github: https://github.com/Cat7373 || github
 
 # Blog rolls
-links_layout: inline
 links:
   Jim's Notes: http://notes.jimliang.com/
   Locsian's Blog: https://www.locsian.com
@@ -96,10 +94,11 @@ post_edit:
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
-# Code Highlight theme
-# Available values: normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night eighties
+codeblock:
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright
+  # See: https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: night eighties
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
