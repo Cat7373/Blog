@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.cat73.org/20160608/2016060801.github-hexo/</loc>
+    
+    <lastmod>2019-09-19T02:40:08.840Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.cat73.org/20190919/2019091901.books/</loc>
     
     <lastmod>2019-09-19T02:37:30.119Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>https://blog.cat73.org/20160805/2016080501.next-highlight-langs/</loc>
     
     <lastmod>2018-03-15T05:15:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.cat73.org/20160608/2016060801.github-hexo/</loc>
-    
-    <lastmod>2018-03-15T05:14:18.000Z</lastmod>
     
   </url>
   
