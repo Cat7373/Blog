@@ -1,6 +1,6 @@
 let gulp = require('gulp');
 let cleanCSS = require('gulp-clean-css');
-let uglify = require('gulp-uglify');
+let uglify = require('gulp-uglify-es').default;
 let htmlclean = require('gulp-htmlclean');
 let htmlmin = require('gulp-htmlmin');
 let sriHash = require('gulp-sri-hash');
