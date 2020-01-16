@@ -6,7 +6,7 @@
     "deploy": "hexo clean && hexo generate && gulp && hexo deploy"
   },
   "hexo": {
-    "version": "3.9.0"
+    "version": "4.2.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -15,13 +15,13 @@
     "gulp-htmlclean": "^2.7.22",
     "gulp-htmlmin": "^5.0.1",
     "gulp-sri-hash": "^2.2.1",
-    "gulp-uglify-es": "^1.0.4",
+    "gulp-uglify-es": "^2.0.0",
     "hexo": "^3.9.0",
-    "hexo-deployer-git": "^2.0.0",
+    "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^1.0.0",
-    "hexo-generator-sitemap": "^1.2.0",
+    "hexo-generator-sitemap": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
