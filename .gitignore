@@ -7,3 +7,5 @@ public/
 .deploy*/
 privates/
 node_modules/
+yarn.lock
+
