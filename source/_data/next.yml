@@ -19,9 +19,6 @@ github_banner:
 # Disable Baidu transformation on mobile devices.
 disable_baidu_transformation: true
 
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: true
-
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
 index_with_subtitle: true
@@ -37,9 +34,10 @@ index_with_subtitle: true
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 # External url should start with http:// or https://
 menu:
-  categories: /categories/ || th
-  tags: /tags/ || tags
-  about: /about/ || user
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -62,7 +60,7 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  Github: https://github.com/Cat7373 || github
+  Github: https://github.com/Cat7373 || fab fa-github
 
 # Blog rolls
 links:
