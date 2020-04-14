@@ -2,23 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.cat73.org/20200412/2020041201.raspberry-pi-ap/</loc>
+    
+    <lastmod>2020-04-14T08:12:26.974Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.cat73.org/20200229/2020022901.leetcode/</loc>
     
     <lastmod>2020-04-13T02:29:58.156Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.cat73.org/20200412/2020041201.raspberry-pi-ap/</loc>
-    
-    <lastmod>2020-04-13T02:29:31.703Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.cat73.org/20200313/2020031301.kotlin-/</loc>
-    
-    <lastmod>2020-03-24T09:34:48.025Z</lastmod>
     
   </url>
   
