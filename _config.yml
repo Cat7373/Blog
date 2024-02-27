@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.cat73.org
+url: https://old-blog.cat73.org
 root: /
 permalink: :year:month:day/:title/
 permalink_defaults:
